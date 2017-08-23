@@ -1,0 +1,7 @@
+name: ADamageModifier
+main: ru.stormcraft.adamagemodifier.Main
+version: 1.2
+commands:
+  admgm:
+    description: Reload ADamageModifier's configs.
+    usage: /admgm reload
