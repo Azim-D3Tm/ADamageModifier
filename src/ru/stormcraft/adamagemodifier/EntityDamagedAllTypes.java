@@ -8,17 +8,17 @@ public class EntityDamagedAllTypes implements Listener {
 	
 	@EventHandler
 	public void damaged(EntityDamageEvent event){
-		if(Main.debug){    System.out.println("ADMGM-DEBUG: Entity type: "+event.getEntityType().toString());    } //debug
+		Main.debug("ADMGM-DEBUG: Entity type: "+event.getEntityType().toString());
 		
 		if(Main.Ents.containsKey(event.getEntityType())){ 
 			
-			if(Main.debug){    System.out.println("ADMGM-DEBUG: Damage Cause: "+event.getCause().toString());    } //debug
+			Main.debug("ADMGM-DEBUG: Damage Cause: "+event.getCause().toString());
 			
 			if(Main.Causes.containsKey(event.getCause())){
 				
 				double dmg = event.getDamage()*Main.Causes.get(event.getCause())*Main.Ents.get(event.getEntityType());
 				if(dmg<0){   dmg *= -1.0;   }
-				if(Main.debug){    System.out.println("ADMGM-DEBUG: Applying damage: "+ dmg);    }
+				Main.debug("ADMGM-DEBUG: Applying damage: "+ dmg);
 				
 				event.setDamage(dmg);
 				

@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
@@ -141,6 +142,12 @@ public class Main extends JavaPlugin {
 				System.out.println("ADMGM: No Entities loaded! Plugin will not work!");
 			}
 			//System.out.println("ADMGM: Disabling...");
+		}
+	}
+	
+	static void debug(String msng){
+		if(debug){
+			Bukkit.getLogger().info(msng);
 		}
 	}
 }
