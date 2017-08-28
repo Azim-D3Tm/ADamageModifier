@@ -22,8 +22,6 @@ public class EntityDamagedAllTypes implements Listener {
 				
 				event.setDamage(dmg);
 				
-				
-				
 			}
 		}
 	}
