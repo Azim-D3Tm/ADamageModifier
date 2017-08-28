@@ -5,7 +5,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 
 public class EntityDamagedAllTypes implements Listener {
-	
 	@EventHandler
 	public void damaged(EntityDamageEvent event){
 		Main.debug("ADMGM-DEBUG: Entity type: "+event.getEntityType().toString());
