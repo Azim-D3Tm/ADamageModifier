@@ -78,7 +78,7 @@ public class Main extends JavaPlugin {
 			getConfig().addDefault("types.damage."+cos.toString()+".counter",1.0);
 		}
 		for(EntityType entity : EntityType.values()){
-			if ((entity.isSpawnable()) && (entity.isAlive())) {
+			if (entity.isAlive()) {
 		       getConfig().addDefault("types.entity."+entity.toString()+".enable",false);
 		       getConfig().addDefault("types.entity."+entity.toString()+".counter",1.0);
 		    }
@@ -99,7 +99,7 @@ public class Main extends JavaPlugin {
 	public HashMap<EntityType, Double> getEnabledEnts(){
 		HashMap<EntityType, Double> list = new HashMap<EntityType, Double>();
 		for(EntityType ent : EntityType.values()){
-			if ((ent.isSpawnable()) && (ent.isAlive())) {
+			if (ent.isAlive()) {
 				if(getConfig().getBoolean("types.entity."+ent.toString()+".enable")){
 					list.put(ent, getConfig().getDouble("types.entity."+ ent.toString() +".counter"));
 				}
